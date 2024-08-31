@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Childhood Memories</title>
+    <style>
+        /* Background and Overlay */
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, loving font */
+            background: url('background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .background-overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+        }
+
+        /* Header Styling */
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: red; /* Red color for the heading */
+            text-shadow: 2px 2px 5px pink; /* Loving pink shadow */
+            animation: pulse 1.5s infinite; /* Pulsing effect */
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            animation: slideIn 1.5s ease-in-out; /* Slide-in animation */
+        }
+
+        /* Video Gallery */
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .video-item {
+            max-width: 300px;
+            text-align: center;
+            transform: scale(0);
+            animation: zoomIn 1s forwards; /* Zoom-in animation */
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid pink; /* Pink border for a loving touch */
+        }
+
+        .video-item p {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            to { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay">
+        <div class="header">
+            <h1>Childhood Memories</h1>
+            <p>Relive those unforgettable moments</p>
+        </div>
+        
+        <div class="video-gallery">
+            <div class="video-item">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Caption for Video 1</p>
+            </div>
+            <div class="video-item">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Caption for Video 2</p>
+            </div>
+            <!-- Add more videos as needed -->
+        </div>
+    </div>
+</body>
+</html>
